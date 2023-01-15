@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  
+  <h2>Predict if customer will churn</h2>
+  
+  <form method="POST" action="/">
+    Age:<br>
+    <input type="number" name="age" value=100>
+    <br><br>
+    Gender:<br>
+    Please fill in F for 'Female', M as 'Male' or Unknow if 'other gender':<br> 
+    <input type="string" name="gender" value=F>
+    <br><br>
+    Security_no:<br>
+    Please fill in a 7 digit value or leave it blank <br>
+    <input type="string" name="security_no" value="5K0N3X1">
+    <br><br>
+    Region_category:<br>
+    Please fill in 'City', 'Town' or 'Villiage':<br>
+    <input type="string" name="region_category" value= "City">
+    <br><br>
+    Membership_category:<br>
+    Please fill in one of 'Basic Membership', 'No Membership', 'Gold Membership', 'Silver Membership', 'Premium Membership', 'Platinum Membership':<br>
+    <input type="string" name="membership_category" value='Basic Membership'>
+    <br><br>
+    Joining_date (YYYY-MM-DD):<br>
+    <input type="string" name="joining_date" value= 2017-08-17>
+    <br><br>
+    Joined_through_referral (Yes or No):<br>
+    <input type="string" name="joined_through_referral" value=Yes>
+    <br><br>
+    referral_id (8 dgits):<br>
+    <input type="string" name="referral_id" value=CID21329>
+    <br><br>
+    preferred_offer_types ('Gift Vouchers/Coupons', 'Credit/Debit Card Offers', 'Without Offers'):<br>
+    <input type="string" name="preferred_offer_types" value='Without Offers'>
+    <br><br>
+    medium_of_operation ('Desktop', 'Smartphone', 'Both'):<br>
+    <input type="string" name="medium_of_operation" value='Both'>
+    <br><br>
+    internet_option ['Wi-Fi', 'Mobile_Data', 'Fiber_Optic'] :<br> 
+    <input type="string" name= internet_option  value= 'Wi-Fi'> 
+    <br><br>
+    last_visit_time (HH:MM:SS):<br> 
+    <input type="string" name= last_visit_time  value=  16:08:02 > 
+      <br><br>
+    days_since_last_login :<br> 
+    <input type="number" name= days_since_last_login  value=  12 > 
+      <br><br>
+    avg_time_spent :<br> 
+    <input type="number" name= avg_time_spent  value=  34.1 > 
+      <br><br>
+    avg_transaction_value :<br> 
+    <input type="number" name= avg_transaction_value  value=  14176.97 > 
+      <br><br>
+    avg_frequency_login_days :<br> 
+    <input type="number" name= avg_frequency_login_days  value=  13 > 
+      <br><br>
+    points_in_wallet :<br> 
+    <input type="number" name= points_in_wallet  value=  705.07 > 
+      <br><br>
+    used_special_discount ( ['Yes', 'No'] ):<br> 
+    <input type="string" name= used_special_discount  value=  Yes > 
+      <br><br>
+    offer_application_preference ( ['Yes', 'No'] ):<br> 
+    <input type="string" name= offer_application_preference  value=  Yes > 
+      <br><br>
+    past_complaint ( ['No', 'Yes'] ):<br> 
+    <input type="string" name= past_complaint  value=  No > 
+      <br><br>
+    complaint_status ( ['Not Applicable', 'Unsolved', 'Solved', 'Solved in Follow-up', 'No Information Available'] ):<br> 
+    <input type="string" name= complaint_status  value= 'Solved'> 
+      <br><br>
+    feedback ( ['Poor Product Quality', 'No reason specified', 'Too many ads', 'Poor Website', 'Poor Customer Service', 'Reasonable Price', 'User Friendly Website', 'Products always in Stock', 'Quality Customer Care'] ):<br> 
+    <input type="string" name= feedback  value=  'Poor Product Quality' > 
+      <br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  {% if pred == 1 %}
+  <p>The customer will  <span style="color:red">CHURN</span> </p>
+  {% endif %}
+   
+  {% if pred == 0%}
+  <p>The customer will  <span style="color:green">STAY</span> </p>
+  {% endif %}
+   
+  
+  </body>
+</html>
